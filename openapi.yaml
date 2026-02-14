@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Reverse Text
-  description: Reverse Text transforms text by reversing characters, words, or lines with multiple reversal modes for different use cases.
+  description: >-
+    Reverse Text transforms text by reversing characters, words, or lines with
+    multiple reversal modes for different use cases.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/reversetext:
     post:
-      summary: Reverse Text
-      description: Reverse Text transforms text by reversing characters, words, or lines with multiple reversal modes for different use cases.
+      summary: Reverse by Characters
+      description: Reverse text character by character
       operationId: reversetext
       parameters: []
       responses:
@@ -35,11 +37,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   reversed: dlroW olleH
                   original: Hello World
@@ -50,7 +52,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -61,17 +63,11 @@ paths:
                 text:
                   type: string
                   description: Text to reverse
-                  example: Hello World
                 mode:
                   type: string
-                  description: "Reversal mode: 'characters', 'words', or 'lines'"
-                  default: characters
-                  example: characters
+                  description: Reversal mode
               required:
-              - text
-              example:
-                text: Hello World
-                mode: characters
+                - text
 components:
   securitySchemes:
     api_key:
@@ -79,4 +75,7 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: Hello World
+  mode: characters
