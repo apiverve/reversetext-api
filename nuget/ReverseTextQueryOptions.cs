@@ -12,14 +12,12 @@ namespace APIVerve.API.ReverseText
     {
         /// <summary>
         /// Text to reverse
-        /// Example: Hello World
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
 
         /// <summary>
-        /// Reversal mode: 'characters', 'words', or 'lines'
-        /// Example: characters
+        /// Reversal mode
         /// </summary>
         [JsonProperty("mode")]
         public string Mode { get; set; }
