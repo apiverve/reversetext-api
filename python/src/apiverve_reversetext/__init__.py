@@ -1,1 +1,3 @@
-from .apiClient import ReversetextAPIClient
+from .apiClient import ReversetextAPIClient, ReversetextAPIClientError
+
+__all__ = ['ReversetextAPIClient', 'ReversetextAPIClientError']
