@@ -44,7 +44,10 @@ from apiverve_reversetext.apiClient import ReversetextAPIClient
 # Initialize the client with your APIVerve API key
 api = ReversetextAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "mode": "characters" }
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "Hello World", "mode": "characters" }
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
 ```
 
 ###### Simple Request
@@ -123,7 +129,10 @@ from apiverve_reversetext.apiClient import ReversetextAPIClient, ReversetextAPIC
 
 api = ReversetextAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "mode": "characters" }
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
 
 try:
     result = api.execute(query)
@@ -144,7 +153,10 @@ from apiverve_reversetext.apiClient import ReversetextAPIClient, ReversetextAPIC
 
 api = ReversetextAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "mode": "characters" }
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
 
 try:
     result = api.execute(query)
@@ -178,7 +190,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_reversetext.apiClient import ReversetextAPIClient, ReversetextAPIClientError
 
-query = { "text": "Hello World", "mode": "characters" }
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
 
 # Using context manager ensures proper cleanup
 with ReversetextAPIClient("[YOUR_API_KEY]") as api:
@@ -204,7 +219,10 @@ from apiverve_reversetext.apiClient import ReversetextAPIClient
 # Enable debug mode
 api = ReversetextAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "Hello World", "mode": "characters" }
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -219,8 +237,12 @@ from apiverve_reversetext.apiClient import ReversetextAPIClient
 
 api = ReversetextAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "Hello World",
+    "mode": "characters"
+}
+
 try:
-    query = { "text": "Hello World", "mode": "characters" }
     result = api.execute(query)
     print(result)
 finally:
