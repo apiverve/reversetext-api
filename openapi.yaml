@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/reversetext:
     post:
-      summary: Reverse by Characters
+      summary: Reverse Text
       description: Reverse text character by character
       operationId: reversetext
       parameters: []
