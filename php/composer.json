@@ -1,7 +1,7 @@
 {
     "name": "apiverve/reversetext",
     "description": "Reverse Text transforms text by reversing characters, words, or lines with multiple reversal modes for different use cases.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
