@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/reversetext",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Reverse Text transforms text by reversing characters, words, or lines with multiple reversal modes for different use cases.",
   "main": "index.js",
   "types": "index.d.ts",
