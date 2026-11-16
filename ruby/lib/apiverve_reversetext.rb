@@ -4,6 +4,6 @@ require_relative "apiverve_reversetext/client"
 
 module APIVerve
   module Reversetext
-    VERSION = "1.2.5"
+    VERSION = "1.2.6"
   end
 end
